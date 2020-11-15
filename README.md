@@ -1,2 +1,2 @@
 # msgFilterRules_to_db
-Wyciąga regyły filtrowania z thunderbirda do bazy danych sqlite
+Wyciąga reguły filtrowania z thunderbirda do bazy danych sqlite
