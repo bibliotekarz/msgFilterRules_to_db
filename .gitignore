@@ -1,2 +1,3 @@
 source
 msgFilterRules_to_db.code-workspace
+sql/default.db

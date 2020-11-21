@@ -14,6 +14,7 @@ def rozbij(lista):
         
     print (slownik)
     print(" ")
+    print(slownik.keys())
 
 
 if len(argv) > 1 :
