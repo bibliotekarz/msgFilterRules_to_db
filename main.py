@@ -9,9 +9,11 @@ def rozbij(lista):
         cos_podzielone = cos.split("=")
         # print("cos_podzielone1 " + cos_podzielone[0])
         # print("cos_podzielone2 " + cos_podzielone[1].replace('"',''))
-        slownik[cos_podzielone[0]] = cos_podzielone[1].replace('"','').replace(") OR (all addresses,contains,", " ").replace("OR (all addresses,contains,", "")
+        slownik[cos_podzielone[0]] = cos_podzielone[1].replace('"','').replace(") OR (all addresses,contains,", " ").replace("OR (all addresses,contains,", "").replace(") OR (from,contains,", " ").replace("OR (from,contains,", "").replace(") OR (\\return-path\\,contains,", " ").replace(") OR (\\x-wp-ip\\,contains,", " ").replace(") OR (\\x-originator\\,contains,", " ").replace(") OR (\\x-originating-ip\\,contains,"," ").replace(") OR (\\received\\,contains,", " ")
         # print(type(slownik))
+        
     print (slownik)
+    print(" ")
 
 
 if len(argv) > 1 :
@@ -23,7 +25,7 @@ else :
 
 # # tylko na czas testów
 plik = "source\\beka_msgFilterRules.txt"
-# plik = "source\msgFilterRules.txt"
+#plik = "source\msgFilterRules.txt"
 
 f = open(plik, "r", encoding='utf8')
 
@@ -41,6 +43,5 @@ while licznik < i:
     do_slownika = slownik_do_bazy.splitlines()
     # print(do_slownika)
     rozbij(do_slownika)
-    print(" ")
     licznik += 1
     
